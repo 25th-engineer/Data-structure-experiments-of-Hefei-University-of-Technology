@@ -3,8 +3,8 @@
 //      are changed infrequently
 //
 
-#if !defined(AFX_STDAFX_H__195DB73A_A23D_4A80_A4F5_2F4FC5141CBC__INCLUDED_)
-#define AFX_STDAFX_H__195DB73A_A23D_4A80_A4F5_2F4FC5141CBC__INCLUDED_
+#if !defined(AFX_STDAFX_H__F1CE48FC_1D41_45D9_B60D_6D065D91DB10__INCLUDED_)
+#define AFX_STDAFX_H__F1CE48FC_1D41_45D9_B60D_6D065D91DB10__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
@@ -14,16 +14,14 @@
 
 using namespace std;
 
-typedef int elementType;
-typedef struct node
-{
-	elementType data;
-	node* next;
-}LList, *PList;
+//typedef int elementType;
+typedef double elementType;
+typedef char elementType1;
+const int maxLength = 1000 + 3;
 
 // TODO: reference additional headers your program requires here
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_STDAFX_H__195DB73A_A23D_4A80_A4F5_2F4FC5141CBC__INCLUDED_)
+#endif // !defined(AFX_STDAFX_H__F1CE48FC_1D41_45D9_B60D_6D065D91DB10__INCLUDED_)
