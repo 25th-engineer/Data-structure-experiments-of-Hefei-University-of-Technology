@@ -31,7 +31,7 @@ bool charLinkedQueue::emptyCharLinkedQueue()
 	return _front == NULL;
 }
 
-bool charLinkedQueue::enQueue( elementType1 value )
+bool charLinkedQueue::enQueue( bitNode *value )
 {
 	CLNode *newNode = new CLNode;
 	if( !newNode )
@@ -53,7 +53,7 @@ bool charLinkedQueue::enQueue( elementType1 value )
 	return true;
 }
 
-bool charLinkedQueue::deQueue( elementType1 &value )
+bool charLinkedQueue::deQueue( /*elementType &value*/ )
 {
 	if( emptyCharLinkedQueue() )
 	{
@@ -61,7 +61,7 @@ bool charLinkedQueue::deQueue( elementType1 &value )
 		return false;
 	}
 	CLNode *tmp = _front;
-	value = _front->data;
+	//value = _front->data;
 	_front = _front->link;
 	delete tmp;
 	if( _front == NULL )
@@ -69,14 +69,14 @@ bool charLinkedQueue::deQueue( elementType1 &value )
 	return true;
 }
 
-bool charLinkedQueue::getFront( elementType1 &value )
+bool charLinkedQueue::getFront( bitNode *&value )
 {
 	if( emptyCharLinkedQueue() )
 	{
 		cerr << "Queue is empty!\nNode-data acquiring falied!Error in charLinkedQueue::deQueue()!" << endl;
 		return false;
 	}
-	value = _front->data;
+	value = _front->data;//原来我是注释掉的，导致输出一直是A；
 	return true;
 }
 

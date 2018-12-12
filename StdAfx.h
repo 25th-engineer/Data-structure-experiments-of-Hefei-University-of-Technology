@@ -3,42 +3,45 @@
 //      are changed infrequently
 //
 
-#if !defined(AFX_STDAFX_H__009A1125_2F9A_4B93_9830_51B9398EBC52__INCLUDED_)
-#define AFX_STDAFX_H__009A1125_2F9A_4B93_9830_51B9398EBC52__INCLUDED_
+#if !defined(AFX_STDAFX_H__02F8C78B_9F6E_45FF_BFCE_7F99B5AC9359__INCLUDED_)
+#define AFX_STDAFX_H__02F8C78B_9F6E_45FF_BFCE_7F99B5AC9359__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
 
-
 #include <stdc++.h>
-//#include <iostream>
+#include <windows.h>
 
 using namespace std;
 
-typedef int elementType;
-typedef char elementType1;
+typedef char elementType;
+typedef int elementType1;
 
 typedef struct node
 {
-	elementType data;
-	struct node *link;
-}LNode, *PNode;
+	elementType data;//刚开始应该写成将data写成string或者直接将整个函数写成模板的，写完了最后测试时
+					//才发现现在的写法有诸多不便；但修改的话就又要重构一遍，懒得整了。
+	struct node *leftChild, *rightChild;
+}bitNode, *binTree;
 
 typedef struct charNode
 {
-	elementType1 data;
+	//elementType data;
+	bitNode *data;//the type must be bitNode*
 	struct charNode *link;
 }CLNode, *CPNode;
 
-//typedef struct linkedQueue
+
+//typedef struct charNode
 //{
-//	LNode *_front, *_rear;
-//}LQueue, *PQueue;
+	//elementType data;
+	//struct charNode *leftChild, *rightChild;
+//}charBitNode, *charBinTree;
 
 // TODO: reference additional headers your program requires here
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_STDAFX_H__009A1125_2F9A_4B93_9830_51B9398EBC52__INCLUDED_)
+#endif // !defined(AFX_STDAFX_H__02F8C78B_9F6E_45FF_BFCE_7F99B5AC9359__INCLUDED_)
