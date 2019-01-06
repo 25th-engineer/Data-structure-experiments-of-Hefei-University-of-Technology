@@ -1,0 +1,19 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: _Tree_Sort - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "bscmake.exe /nologo /o"Debug/_Tree_Sort.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\_Tree_Sort.sbr" ".\Debug\SeqList.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+_Tree_Sort.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

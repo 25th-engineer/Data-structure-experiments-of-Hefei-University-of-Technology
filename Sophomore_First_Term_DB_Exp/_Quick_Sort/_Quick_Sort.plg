@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: _Quick_Sort - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP906B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/_Quick_Sort.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\µÛ∑ ’¨\_Quick_Sort\_Quick_Sort.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP906B.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP906C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/_Quick_Sort.pdb" /debug /machine:I386 /out:"Debug/_Quick_Sort.exe" /pdbtype:sept 
+".\Debug\_Quick_Sort.obj"
+".\Debug\SeqList.obj"
+".\Debug\StdAfx.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP906C.tmp"
+<h3>Output Window</h3>
+Compiling...
+_Quick_Sort.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/_Quick_Sort.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\_Quick_Sort.sbr" ".\Debug\SeqList.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+_Quick_Sort.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
