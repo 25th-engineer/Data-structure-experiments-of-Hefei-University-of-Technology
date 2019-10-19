@@ -52,7 +52,7 @@ int main()
 			if (!G.empty())
 			{
 				std::cout << str << std::endl;
-				std::cout << "¸ÃÍ¼ÖÐ±ß(»¡)µÄÊýÁ¿Îª:" << G.get_Enum_l() << std::endl;
+				std::cout << "è¯¥å›¾ä¸­è¾¹(å¼§)çš„æ•°é‡ä¸º:" << G.get_Enum_l() << std::endl;
 			}
 			else
 			{

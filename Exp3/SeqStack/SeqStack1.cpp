@@ -34,7 +34,7 @@ bool SeqStack::getTop( elementType& value )
 {
 	if( stackEmpty() )
 	{
-		cout << "???¨¢????????¨¢" << endl;
+		cout << "???Ð¸Ð²????????Ð¸Ð²" << endl;
 		return false;
 	}
 	value = data[top];
@@ -45,7 +45,7 @@ bool SeqStack::push( elementType value )
 {
 	if( stackFull() )
 	{
-		cout << "?¨²¨¢????¨¢" << endl;
+		cout << "?Ð¸â–“Ð¸Ð²????Ð¸Ð²" << endl;
 		return false;
 	}
 	top ++;
@@ -57,7 +57,7 @@ bool SeqStack::pop()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢????¨¢" << endl;
+		cout << "??Ð¸Ð²????Ð¸Ð²" << endl;
 		return false;
 	}
 	top --;
@@ -68,7 +68,7 @@ int SeqStack::length()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢" << endl;
+		cout << "??Ð¸Ð²" << endl;
 		return -1;
 	}
 	return top + 1;
@@ -78,7 +78,7 @@ void SeqStack::displayStack()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢????¨¢" << endl;
+		cout << "??Ð¸Ð²????Ð¸Ð²" << endl;
 		return;
 	}
 	int column = 0;
@@ -181,7 +181,7 @@ double SeqStack::doOperator( elementType value1, elementType value2, elementType
 	return -1;
 }
 
-void SeqStack::calculate( charSeqStack& css1, charSeqStack& css2 )//?????? css2 ?¨¬????????? css1 ?
+void SeqStack::calculate( charSeqStack& css1, charSeqStack& css2 )//?????? css2 ?Ð¸Ð¼????????? css1 ?
 {
 	char ch, ch1;
 	int i = 0, j = 0;

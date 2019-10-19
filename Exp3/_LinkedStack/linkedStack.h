@@ -23,8 +23,8 @@ public:
 	bool pop();
 	int length();
 	void displayStack();
-	int isp( char  _operator );//Õ»ÄÚÓÅÏÈ¼¶
-	int icp( char _operator );//Õ»ÍâÓÅÏÈ¼¶
+	int isp( char  _operator );//æ ˆå†…ä¼˜å…ˆçº§
+	int icp( char _operator );//æ ˆå¤–ä¼˜å…ˆçº§
 	double doOperator( elementType value1, elementType value2, char _operator );
 	void calculate( char* Str );
 	charLinkedStack cls;

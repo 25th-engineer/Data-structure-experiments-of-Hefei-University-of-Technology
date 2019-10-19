@@ -9,7 +9,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-//¸Õ¿ªÊ¼³¢ÊÔÐ´Ó¢ÎÄ×¢ÊÍµÄ£¬ºóÃæÖªÄÑ¶øÍËÁË£»²»¹ýÔ­À´µÄÓ¢ÎÄ×¢ÊÍÎÒ±£ÁôÁË
+//åˆšå¼€å§‹å°è¯•å†™è‹±æ–‡æ³¨é‡Šçš„ï¼ŒåŽé¢çŸ¥éš¾è€Œé€€äº†ï¼›ä¸è¿‡åŽŸæ¥çš„è‹±æ–‡æ³¨é‡Šæˆ‘ä¿ç•™äº†
 
 class charLinkedQueue  
 {
@@ -51,9 +51,9 @@ public:
 		}
 		os << endl;
 	}
-	//ÎªÁËÄÜË³ÀûÊ¹ÓÃÔ­À´µÄÕâ¸ö´úÂë¿éÀ´½øÐÐ¶þ²æÊ÷µÄ²ã´Î±ãÀû£¬ÎÒÖ÷ÒªµÄ¾«Á¦¶¼·ÅÔÚ_front¡¢_rearÀàÐÍ¡¢
-	//deQueue()¡¢enQueue()¡¢charNodeµÄÀàÐÍÈ·¶¨ÉÏ£¬¾­¹ýÎÞÊý´Î³¢ÊÔ£¬×ÜËã½á¹û¶ÔÁË----
-	//Èç¹ûÓÐGit£¬¿´ÁËÕâ¸ö´úÂëµÄÃ¿¸ö°æ±¾Äã¾Í»áÖªµÀÎÒ¸¶³öÁË¶àÉÙÐÄÑª¡£¡£¡£¡£
+	//ä¸ºäº†èƒ½é¡ºåˆ©ä½¿ç”¨åŽŸæ¥çš„è¿™ä¸ªä»£ç å—æ¥è¿›è¡ŒäºŒå‰æ ‘çš„å±‚æ¬¡ä¾¿åˆ©ï¼Œæˆ‘ä¸»è¦çš„ç²¾åŠ›éƒ½æ”¾åœ¨_frontã€_rearç±»åž‹ã€
+	//deQueue()ã€enQueue()ã€charNodeçš„ç±»åž‹ç¡®å®šä¸Šï¼Œç»è¿‡æ— æ•°æ¬¡å°è¯•ï¼Œæ€»ç®—ç»“æžœå¯¹äº†----
+	//å¦‚æžœæœ‰Gitï¼Œçœ‹äº†è¿™ä¸ªä»£ç çš„æ¯ä¸ªç‰ˆæœ¬ä½ å°±ä¼šçŸ¥é“æˆ‘ä»˜å‡ºäº†å¤šå°‘å¿ƒè¡€ã€‚ã€‚ã€‚ã€‚
 private:
 	CLNode *_front;//the type must be CLNode*
 	CLNode *_rear;//the type must be CLNode*

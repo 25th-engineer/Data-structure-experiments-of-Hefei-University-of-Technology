@@ -14,8 +14,8 @@ class BSTree
 public:
 	BSTree();
 	virtual ~BSTree();
-	BSTNode *search( _BSTree BST, elementType value );//µİ¹é²éÕÒ
-	BSTNode *search( _BSTree BST, elementType value, _BSTree &father );//µü´ú²éÕÒ
+	BSTNode *search( _BSTree BST, elementType value );//ÂµÃÂ¹Ã©Â²Ã©Ã•Ã’
+	BSTNode *search( _BSTree BST, elementType value, _BSTree &father );//ÂµÃ¼Â´ÃºÂ²Ã©Ã•Ã’
 	BSTNode *getRootNode();
 	bool insert( _BSTree BST, elementType value );
 	bool deleteNode( _BSTree BST, elementType value );

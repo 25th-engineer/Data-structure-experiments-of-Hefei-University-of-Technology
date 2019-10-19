@@ -17,9 +17,9 @@ public:
 	void display();
 
 	AVLNode<T>* RR_Rotate(AVLNode<T> *AVLB);		//rotate left
-													//当在RR发生不平衡时需要进行左旋转
+													//褰撳湪RR鍙戠敓涓嶅钩琛℃椂闇�瑕佽繘琛屽乏鏃嬭浆
 	AVLNode<T>* LL_Rotate(AVLNode<T> *AVLB);		//rotate right
-													//当在LL发生不平衡时需要进行右旋转
+													//褰撳湪LL鍙戠敓涓嶅钩琛℃椂闇�瑕佽繘琛屽彸鏃嬭浆
 	AVLNode<T>* LR_Rotate(AVLNode<T> *AVLB);	//rotate left then right
 	AVLNode<T>* RL_Rotate(AVLNode<T> *AVLB);	//rotate right then left
 	AVLNode<T>* getRootNode();

@@ -37,7 +37,7 @@ bool charSeqStack::getTop( elementType1& value )
 	if( stackEmpty() )
 	{
 		value = '#';
-		//cout << "Õ»¿Õ£¡·ÃÎÊÕ»¶¥ÔªËØÊ§°Ü£¡charSeqStack" << endl;
+		//cout << "æ ˆç©ºï¼è®¿é—®æ ˆé¡¶å…ƒç´ å¤±è´¥ï¼charSeqStack" << endl;
 		return false;
 	}
 	value = data[top];
@@ -49,7 +49,7 @@ bool charSeqStack::push( elementType1 value )
 	ios::sync_with_stdio(false);
 	if( stackFull() )
 	{
-		cout << "Õ»Âú£¡Ñ¹Õ»Ê§°Ü£¡" << endl;
+		cout << "æ ˆæ»¡ï¼åŽ‹æ ˆå¤±è´¥ï¼" << endl;
 		return false;
 	}
 	top ++;
@@ -61,7 +61,7 @@ bool charSeqStack::pop()
 {
 	if( stackEmpty() )
 	{
-		cout << "Õ»¿Õ£¡µ¯Õ»Ê§°Ü£¡" << endl;
+		cout << "æ ˆç©ºï¼å¼¹æ ˆå¤±è´¥ï¼" << endl;
 		return false;
 	}
 	top --;
@@ -72,7 +72,7 @@ int charSeqStack::length()
 {
 	if( stackEmpty() )
 	{
-		cout << "Õ»¿Õ£¡" << endl;
+		cout << "æ ˆç©ºï¼" << endl;
 		return -1;
 	}
 	return top + 1;
@@ -82,7 +82,7 @@ void charSeqStack::displayStack()
 {
 	if( stackEmpty() )
 	{
-		cout << "Õ»¿Õ£¡ÎÞ·¨´òÓ¡£¡" << endl;
+		cout << "æ ˆç©ºï¼æ— æ³•æ‰“å°ï¼" << endl;
 		return;
 	}
 	int column = 0;
@@ -105,7 +105,7 @@ void charSeqStack::baseTransform( ll value )
 {
 	if( stackFull() )
 	{
-		cout << "Õ»ÒÑÂú£¡ÎÞ·¨×ª»»£¡" << endl;
+		cout << "æ ˆå·²æ»¡ï¼æ— æ³•è½¬æ¢ï¼" << endl;
 		return;
 	}
 	ll tmp = value;
@@ -152,7 +152,7 @@ bool charSeqStack::brancheMatch( char *Str )
 	
 	if( stackFull() )
 	{
-		cout << "Õ»ÒÑÂú£¡ÎÞ·¨ÅÐ¶Ï£¡" << endl;
+		cout << "æ ˆå·²æ»¡ï¼æ— æ³•åˆ¤æ–­ï¼" << endl;
 		return false;
 	}
 	int i = 0;
@@ -172,7 +172,7 @@ bool charSeqStack::brancheMatch( char *Str )
 			{
 				ch1 = NULL;
 				getTop(ch1);
-				//°ÑÏÂÃæÕâ¾ä»°·Åµ½ÏÂÃæÕâ¸öifÅÐ¶ÏÀïÃæ½á¹û¾ÍÕýÈ·ÁË
+				//æŠŠä¸‹é¢è¿™å¥è¯æ”¾åˆ°ä¸‹é¢è¿™ä¸ªifåˆ¤æ–­é‡Œé¢ç»“æžœå°±æ­£ç¡®äº†
 				//pop();
 				//cout << (*this) << endl;
 				if( ( ch == ')' && ch1 == '(' ) || 

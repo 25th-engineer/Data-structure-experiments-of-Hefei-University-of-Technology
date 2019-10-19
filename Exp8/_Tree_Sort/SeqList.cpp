@@ -82,7 +82,7 @@ SeqList<T>::SeqList( int length, double choice )
 	//freopen( "x2.in", "r", stdin );
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  »ñÈ¡Êä³öÁ÷µÄ¾ä±ú
+    //  è·å–è¾“å‡ºæµçš„å¥æŸ„
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	srand( time(NULL) );
 	Arr = new T[length];
@@ -109,7 +109,7 @@ void SeqList<T>::readDataFromFile()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  »ñÈ¡Êä³öÁ÷µÄ¾ä±ú
+    //  è·å–è¾“å‡ºæµçš„å¥æŸ„
     hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	char fileName[50];
 	SetConsoleTextAttribute(hOut, 8 | 7 );
@@ -196,7 +196,7 @@ void SeqList<T>::showSwapingAndComparingTimesAndArrayLength()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  »ñÈ¡Êä³öÁ÷µÄ¾ä±ú
+    //  è·å–è¾“å‡ºæµçš„å¥æŸ„
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	SetConsoleTextAttribute(hOut, 8 | 5 );
 	cout << "Array length = " << arraySize << endl;
@@ -236,30 +236,30 @@ template<class T>
 void SeqList<T>::fixUpTree( Rec *tree, int pos )
 {
 	int i = pos;
-	if ( i  %  2 )   //iÎ»ÓÚÓÒ×ÓÊ÷  
-		tree[ ( i - 1 ) / 2 ] = tree[ i + 1 ];   //×óº¢×ÓÉÏÉıµ½¸¸½Úµã   
+	if ( i  %  2 )   //iä½äºå³å­æ ‘  
+		tree[ ( i - 1 ) / 2 ] = tree[ i + 1 ];   //å·¦å­©å­ä¸Šå‡åˆ°çˆ¶èŠ‚ç‚¹   
 	else
-		tree[ ( i - 1 ) / 2 ] = tree[ i - 1 ];   //ÓÒº¢×ÓÉÏÉıµ½¸¸½Úµã   
+		tree[ ( i - 1 ) / 2 ] = tree[ i - 1 ];   //å³å­©å­ä¸Šå‡åˆ°çˆ¶èŠ‚ç‚¹   
 	i = ( i - 1 ) / 2;
 	int j;
-	while (i)     //ÉÏÉıµ½¸ù½Úµã£¬ÔòÖÕÖ¹Ñ­»·   
+	while (i)     //ä¸Šå‡åˆ°æ ¹èŠ‚ç‚¹ï¼Œåˆ™ç»ˆæ­¢å¾ªç¯   
 	{
-		i % 2 ? j = i + 1 : j = i - 1;     //È·¶¨iµÄĞÖµÜjµÄÏÂ±ê   
-		if ( !tree[i].active || !tree[j].active )  //×óÓÒº¢×ÓÓĞÒ»¸öÎª¿Õ   
+		i % 2 ? j = i + 1 : j = i - 1;     //ç¡®å®šiçš„å…„å¼Ÿjçš„ä¸‹æ ‡   
+		if ( !tree[i].active || !tree[j].active )  //å·¦å³å­©å­æœ‰ä¸€ä¸ªä¸ºç©º   
 		{
 			if ( tree[i].active )
 				tree[ (i - 1) / 2 ] = tree[i];
 			else
 				tree[ (i - 1) / 2 ] = tree[j];
 		}
-		else  //×óÓÒº¢×Ó¶¼²»Îª¿Õ   
+		else  //å·¦å³å­©å­éƒ½ä¸ä¸ºç©º   
 		{
 			if ( tree[i].data <= tree[j].data )
 				tree[ ( i - 1 ) / 2 ] = tree[i];
 			else
 				tree[ ( i - 1 ) / 2 ] = tree[j];
 		}
-		i = ( i - 1 ) / 2;   //»Øµ½ÉÏÒ»²ã   
+		i = ( i - 1 ) / 2;   //å›åˆ°ä¸Šä¸€å±‚   
 	}
 }
 
@@ -269,46 +269,46 @@ void SeqList<T>::treeSelectSort( T a[], int n )
 	int i = 0;
 	while ( pow( double(2), i ) < n )
 		i ++;
-	int leaf = pow( 2, i );   //ÍêÈ«¶ş²æÊ÷Ò¶×Ó½Úµã¸öÊı   
-	int size = 2 * leaf - 1;   //Ê÷½Úµã×ÜÊı  ÌáÊ¾3  
-	Rec *tree = new Rec[size];  //Ë³Ğò´æ´¢Ò»¿ÃÊ÷   
+	int leaf = pow( 2, i );   //å®Œå…¨äºŒå‰æ ‘å¶å­èŠ‚ç‚¹ä¸ªæ•°   
+	int size = 2 * leaf - 1;   //æ ‘èŠ‚ç‚¹æ€»æ•°  æç¤º3  
+	Rec *tree = new Rec[size];  //é¡ºåºå­˜å‚¨ä¸€æ£µæ ‘   
 	for ( i = 0; i < leaf; i ++ )
 	{
 		if (i < n )
 		{
-			//leaf-1ÊÇÒ¶×Ó½ÚµãµÄÆğÊ¼ÏÂ±ê
+			//leaf-1æ˜¯å¶å­èŠ‚ç‚¹çš„èµ·å§‹ä¸‹æ ‡
 			tree[ i + leaf - 1 ].data = a[i];
 			tree[ i + leaf - 1 ].index = i;
 			tree[ i + leaf - 1 ].active = true;
 		}
-		else//Ò¶×Ó½ÚµãÏÂ±ê´Ó leaf-1+n¿ªÊ¼£¬ºóÃæ¶¼ÊÇ¿ÕµÄ£¬ÎŞ´Ë²ÎÈüÕß  
+		else//å¶å­èŠ‚ç‚¹ä¸‹æ ‡ä» leaf-1+nå¼€å§‹ï¼Œåé¢éƒ½æ˜¯ç©ºçš„ï¼Œæ— æ­¤å‚èµ›è€…  
 			tree[ i + leaf - 1 ].active = false;    
 	}
-	i = leaf - 1;    //ÌáÊ¾3  
+	i = leaf - 1;    //æç¤º3  
 	int j;
-	while (i)   //ÉÏÉıµ½¸ù½Úµã£¬ÔòÖÕÖ¹Ñ­»·   
+	while (i)   //ä¸Šå‡åˆ°æ ¹èŠ‚ç‚¹ï¼Œåˆ™ç»ˆæ­¢å¾ªç¯   
 	{
 		j = i;
-		while ( j < 2 * i )   //ÏÂÃæµÄÌáÊ¾4  
+		while ( j < 2 * i )   //ä¸‹é¢çš„æç¤º4  
 		{
-			//ÎŞÓÒ½Úµã»òÓÒ½ÚµãÒÑ³ö¾Ö£¬¼´Ê¹´æÔÚÓÒ½Úµã£¬ÆäÖµÓòÒ²±È×ó½Úµã´ó  
+			//æ— å³èŠ‚ç‚¹æˆ–å³èŠ‚ç‚¹å·²å‡ºå±€ï¼Œå³ä½¿å­˜åœ¨å³èŠ‚ç‚¹ï¼Œå…¶å€¼åŸŸä¹Ÿæ¯”å·¦èŠ‚ç‚¹å¤§  
 			if ( ! tree[j + 1].active || tree[j + 1].data > tree[j].data )  
 				tree[ ( j - 1 ) / 2 ] = tree[j];
 			else
 				tree[ ( j - 1 ) / 2 ] = tree[j + 1];
-			j += 2;     //Á½Á½±È½Ï   
+			j += 2;     //ä¸¤ä¸¤æ¯”è¾ƒ   
 		}
-		i = ( i - 1 ) / 2;  //»Øµ½ÉÏÒ»²ã    
+		i = ( i - 1 ) / 2;  //å›åˆ°ä¸Šä¸€å±‚    
 	}
 	i = 0;
-	while ( i < n - 1 ) //È·¶¨Ê£ÏÂµÄn-1¸ö½ÚµãµÄ´ÎĞò   
+	while ( i < n - 1 ) //ç¡®å®šå‰©ä¸‹çš„n-1ä¸ªèŠ‚ç‚¹çš„æ¬¡åº   
 	{
 		a[i] = tree[0].data;
-		tree[ leaf - 1 + tree[0].index ].active = false; //³ö¾Ö£¬²»²ÎÓëÏÂÒ»ÂÖ
-		//Ã¿´Î³ö¾Öºó¶¼Ğèµ÷Õû
+		tree[ leaf - 1 + tree[0].index ].active = false; //å‡ºå±€ï¼Œä¸å‚ä¸ä¸‹ä¸€è½®
+		//æ¯æ¬¡å‡ºå±€åéƒ½éœ€è°ƒæ•´
 		fixUpTree( tree, leaf - 1 + tree[0].index );
 		i ++;
 	}
-	a[ n - 1 ] = tree[0].data;  //×îºóÒ»¸ö¹éÎ»   
+	a[ n - 1 ] = tree[0].data;  //æœ€åä¸€ä¸ªå½’ä½   
 	delete []tree;
 }

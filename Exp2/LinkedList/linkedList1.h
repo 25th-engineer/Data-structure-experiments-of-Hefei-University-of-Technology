@@ -16,22 +16,22 @@ using namespace std;
 class linkedList  
 {
 public:
-	linkedList();//¹¹Ôìº¯Êı
-	virtual ~linkedList();//Îö¹¹º¯Êı£¬Ïú»Ùµ¥Á´±í
-	bool createLinkedListRail( int length );//Î²²å·¨¹¹½¨µ¥Á´±í
-	bool createLinkedListFront( int length );//Í·²å·¨¹¹½¨µ¥Á´±í
-	void addLinkedListNodeLast( int value );//¾¯¸æ£º±ØĞë³õÊ¼»¯²ÅÄÜÊ¹ÓÃ£¡
-	//ÎÒ³¢ÊÔÅĞ¶Ïµ÷ÓÃ¶ÔÏóµÄÁ´±íÊÇ·ñ³õÊ¼»¯À´×÷ÎªÊÇ·ñµ÷ÓÃ¸Ãº¯ÊıµÄÒÀ¾İ£¬½á¹ûÊ§°Ü£ºÎŞÂÛÈçºÎÅĞ¶Ï£¬×ÜÊÇ²»ÄÜÔÚÁã½ÚµãÊ±²åÈë
-	bool initiateLinkedList();//³õÊ¼»¯µ¥Á´±í
-	bool isEmpty();//ÅĞ¶Ïµ¥Á´±íÊÇ·ñÎª¿Õ
-	bool getElementByPosition( int pos, int& value );//Çóµ¥Á´±íÖĞµÚpos¸öÔªËØ£¨º¯Êı£©£¬Èô²»´æÔÚ£¬±¨´í
-	bool insertListByPosition( int pos, int value );//ÔÚµÚpos¸ö½áµãÇ°²åÈëÖµÎªvalueµÄ½áµã
-	bool getElementByValue( int& pos, int value );//Á´±íÖĞ²éÕÒÔªËØÖµÎªxµÄ½áµã£¬³É¹¦·µ»Ø½áµãÖ¸Õë£¬Ê§°Ü±¨´í¡£
-	bool removeListNodeByPosition( int pos, int& value );//É¾³ıµ¥Á´±íÖĞµÚpos¸öÔªËØ½áµã
-	bool insertListSort( int value );//ÔÚÒ»¸öµİÔöÓĞĞòµÄµ¥Á´±íLÖĞ²åÈëÒ»¸öÖµÎªvalueµÄÔªËØ£¬²¢±£³ÖÆäµİÔöÓĞĞòÌØĞÔ
-	bool oddEvenSort( linkedList& LA,linkedList& LB );//½«µ÷ÓÃµ¥Á´±íÖĞµÄÔªËØ°´ÆæÅ¼ĞÔ·ÖÅä½o±»µ÷ÓÃµÄµ¥Á´±íLAÓëLB
-	void printLinkedList();//´òÓ¡µ¥Á´±í
-	int linkedListLength();//·µ»Øµ¥Á´±í³¤¶È
+	linkedList();//æ„é€ å‡½æ•°
+	virtual ~linkedList();//ææ„å‡½æ•°ï¼Œé”€æ¯å•é“¾è¡¨
+	bool createLinkedListRail( int length );//å°¾æ’æ³•æ„å»ºå•é“¾è¡¨
+	bool createLinkedListFront( int length );//å¤´æ’æ³•æ„å»ºå•é“¾è¡¨
+	void addLinkedListNodeLast( int value );//è­¦å‘Šï¼šå¿…é¡»åˆå§‹åŒ–æ‰èƒ½ä½¿ç”¨ï¼
+	//æˆ‘å°è¯•åˆ¤æ–­è°ƒç”¨å¯¹è±¡çš„é“¾è¡¨æ˜¯å¦åˆå§‹åŒ–æ¥ä½œä¸ºæ˜¯å¦è°ƒç”¨è¯¥å‡½æ•°çš„ä¾æ®ï¼Œç»“æœå¤±è´¥ï¼šæ— è®ºå¦‚ä½•åˆ¤æ–­ï¼Œæ€»æ˜¯ä¸èƒ½åœ¨é›¶èŠ‚ç‚¹æ—¶æ’å…¥
+	bool initiateLinkedList();//åˆå§‹åŒ–å•é“¾è¡¨
+	bool isEmpty();//åˆ¤æ–­å•é“¾è¡¨æ˜¯å¦ä¸ºç©º
+	bool getElementByPosition( int pos, int& value );//æ±‚å•é“¾è¡¨ä¸­ç¬¬posä¸ªå…ƒç´ ï¼ˆå‡½æ•°ï¼‰ï¼Œè‹¥ä¸å­˜åœ¨ï¼ŒæŠ¥é”™
+	bool insertListByPosition( int pos, int value );//åœ¨ç¬¬posä¸ªç»“ç‚¹å‰æ’å…¥å€¼ä¸ºvalueçš„ç»“ç‚¹
+	bool getElementByValue( int& pos, int value );//é“¾è¡¨ä¸­æŸ¥æ‰¾å…ƒç´ å€¼ä¸ºxçš„ç»“ç‚¹ï¼ŒæˆåŠŸè¿”å›ç»“ç‚¹æŒ‡é’ˆï¼Œå¤±è´¥æŠ¥é”™ã€‚
+	bool removeListNodeByPosition( int pos, int& value );//åˆ é™¤å•é“¾è¡¨ä¸­ç¬¬posä¸ªå…ƒç´ ç»“ç‚¹
+	bool insertListSort( int value );//åœ¨ä¸€ä¸ªé€’å¢æœ‰åºçš„å•é“¾è¡¨Lä¸­æ’å…¥ä¸€ä¸ªå€¼ä¸ºvalueçš„å…ƒç´ ï¼Œå¹¶ä¿æŒå…¶é€’å¢æœ‰åºç‰¹æ€§
+	bool oddEvenSort( linkedList& LA,linkedList& LB );//å°†è°ƒç”¨å•é“¾è¡¨ä¸­çš„å…ƒç´ æŒ‰å¥‡å¶æ€§åˆ†é…çµ¦è¢«è°ƒç”¨çš„å•é“¾è¡¨LAä¸LB
+	void printLinkedList();//æ‰“å°å•é“¾è¡¨
+	int linkedListLength();//è¿”å›å•é“¾è¡¨é•¿åº¦
 private:
 	LList *head;
 	int len;

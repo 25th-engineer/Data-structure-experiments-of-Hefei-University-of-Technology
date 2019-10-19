@@ -82,7 +82,7 @@ SeqList<T>::SeqList( int length, double choice )
 	//freopen( "x5.in", "r", stdin );
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	srand( time(NULL) );
 	Arr = new T[length];
@@ -106,7 +106,7 @@ void SeqList<T>::readDataFromFile()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 	char fileName[50];
 	SetConsoleTextAttribute(hOut, 8 | 7 );
@@ -168,7 +168,7 @@ void SeqList<T>::display()
 {
 	ios::sync_with_stdio(false);
 	//HANDLE hOut; 
-	//  获取输出流的句柄
+	//  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
 	//hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	int column = 0;
 	for( int i = 0; i < arraySize; i ++ )
@@ -205,7 +205,7 @@ void SeqList<T>::showSwapingAndComparingTimesAndArrayLength()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	SetConsoleTextAttribute(hOut, 8 | 5 );
 	cout << "Array length = " << arraySize << endl;

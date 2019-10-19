@@ -52,7 +52,7 @@ void test2()
 	BT1.createBinaryTree( index,strLine, nLen, nRow);
 	char ch;
 	int key;
-	cout << "Please input a letter as operational character and a number to choose the operation,separated by space.\n\"1\" for searching parent-node£¬\"2\" for searching sibiling-node and \"3\" for searching child-node." << endl;
+	cout << "Please input a letter as operational character and a number to choose the operation,separated by space.\n\"1\" for searching parent-nodeÂ£Â¬\"2\" for searching sibiling-node and \"3\" for searching child-node." << endl;
 	while( cin>> ch >> key )
 	{
 		if( key == 1 )
@@ -78,7 +78,7 @@ void test2()
 		}
 		//Sleep( 1000 * 60 );
 		//system( "cls" );
-		//cout << "Please input a letter as operational character and a number to choose the operation,separated by space.\n\"1\" for searching parent-node£¬\"2\" for searching sibiling-node and \"3\" for searching child-node." << endl;
+		//cout << "Please input a letter as operational character and a number to choose the operation,separated by space.\n\"1\" for searching parent-nodeÂ£Â¬\"2\" for searching sibiling-node and \"3\" for searching child-node." << endl;
 	}
 }
 

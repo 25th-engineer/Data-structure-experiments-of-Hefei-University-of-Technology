@@ -37,7 +37,7 @@ bool charSeqStack::getTop( elementType1& value )
 	if( stackEmpty() )
 	{
 		value = '#';
-		cout << "???¨¢????????¨¢" << endl;
+		cout << "???Ð¸Ð²????????Ð¸Ð²" << endl;
 		return false;
 	}
 	value = data[top];
@@ -48,7 +48,7 @@ bool charSeqStack::push( elementType1 value )
 {
 	if( stackFull() )
 	{
-		cout << "?¨²¨¢????¨¢" << endl;
+		cout << "?Ð¸â–“Ð¸Ð²????Ð¸Ð²" << endl;
 		return false;
 	}
 	top ++;
@@ -60,7 +60,7 @@ bool charSeqStack::pop()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢????¨¢" << endl;
+		cout << "??Ð¸Ð²????Ð¸Ð²" << endl;
 		return false;
 	}
 	top --;
@@ -71,7 +71,7 @@ int charSeqStack::length()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢" << endl;
+		cout << "??Ð¸Ð²" << endl;
 		return -1;
 	}
 	return top + 1;
@@ -81,7 +81,7 @@ void charSeqStack::displayStack()
 {
 	if( stackEmpty() )
 	{
-		cout << "??¨¢????¨¢" << endl;
+		cout << "??Ð¸Ð²????Ð¸Ð²" << endl;
 		return;
 	}
 	int column = 0;

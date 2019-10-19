@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 	cout << CSCQ1.length() << endl;
 	cout << CSCQ1;
 	
-	SCQ1.enQueue(4);//4£¬7£¬8£¬12£¬20£¬50
+	SCQ1.enQueue(4);//4Â£Â¬7Â£Â¬8Â£Â¬12Â£Â¬20Â£Â¬50
 	SCQ1.enQueue(7);
 	SCQ1.enQueue(8);
 	SCQ1.enQueue(12);

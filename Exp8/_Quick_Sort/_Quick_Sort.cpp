@@ -9,7 +9,7 @@ void test1()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	SetConsoleTextAttribute(hOut, 8 | 7 );
 	cout << "Please input the size of the origin random-value array:" << endl;
@@ -45,7 +45,7 @@ void test2()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	SetConsoleTextAttribute(hOut, 8 | 7 );
 	cout << "Please input the size of the origin decreasing array:" << endl;
@@ -81,7 +81,7 @@ void test3()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	SetConsoleTextAttribute(hOut, 8 | 7 );
 	cout << "Please input the size of the origin increasing array:" << endl;
@@ -117,7 +117,7 @@ void test()
 {
 	ios::sync_with_stdio(false);
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	int choose;//, times = 0;
 	//char choose;
@@ -167,7 +167,7 @@ void test()
 int main(int argc, char* argv[])
 {
 	HANDLE hOut; 
-    //  获取输出流的句柄
+    //  鑾峰彇杈撳嚭娴佺殑鍙ユ焺
     hOut = GetStdHandle(STD_OUTPUT_HANDLE); 
 	test();
 	system( "cls" );

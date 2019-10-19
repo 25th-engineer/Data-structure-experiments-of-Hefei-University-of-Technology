@@ -25,8 +25,8 @@ public:
 	bool pop();
 	int length();
 	void displayStack();
-	int isp( elementType1 _operator );//Õ»ÄÚÓÅÏÈ¼¶
-	int icp( elementType1 _operator );//Õ»ÍâÓÅÏÈ¼¶
+	int isp( elementType1 _operator );//æ ˆå†…ä¼˜å…ˆçº§
+	int icp( elementType1 _operator );//æ ˆå¤–ä¼˜å…ˆçº§
 	charSeqStack css;
 	double doOperator( elementType value1, elementType value2, elementType1 _operator );
 	void calculate( charSeqStack& css1, charSeqStack& css2 );

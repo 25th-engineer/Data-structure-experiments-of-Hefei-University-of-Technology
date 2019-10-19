@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	ss1.push(0);
 	charSeqStack css1, css2;
 	char Str[] = "#2+5*(2+3)*6/2-4#";
-	//12+5*£¨2+3£©*6/2-4
+	//12+5*Ð³Ð¸2+3Ð³Ð¹*6/2-4
 	//char Str[] = "#(1+(5-3)*2+9)/2#";
 	//char Str[] = "#(1+2)*3#";
 	//char Str[] = "#(1)#";

@@ -91,7 +91,7 @@ int graph::init_list(void)
 int graph::dfsTraversal_l()
 {
 	int i;
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	i = 0;
 	while (i < this->G_Vnum)
@@ -111,10 +111,10 @@ int graph::dfsTraversal_l(vNode * V)
 	int i;
 	if (V == NULL)
 	{
-		std::cout << "½áµã²»´æÔÚ!" << std::endl;
+		std::cout << "ç»“ç‚¹ä¸å­˜åœ¨!" << std::endl;
 		return -1;
 	}
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	dfs_l(V);
 	i = 0;
@@ -170,7 +170,7 @@ int graph::dfs_l(vNode *V)
 int graph::bfsTraversal_l()
 {
 	int i;
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	i = 0;
 	while (i < this->G_Vnum)
@@ -190,10 +190,10 @@ int graph::bfsTraversal_l(vNode * V)
 	int i;
 	if (V == NULL)
 	{
-		std::cout << "½áµã²»´æÔÚ!" << std::endl;
+		std::cout << "ç»“ç‚¹ä¸å­˜åœ¨!" << std::endl;
 		return -1;
 	}
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	bfs_l(V);
 	i = 0;
@@ -263,7 +263,7 @@ int graph::dfsTraversal_t_l()
 	std::list<eNode*> Le;
 	std::list<vNode*>::iterator iv;
 	std::list<eNode*>::iterator ie;
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	i = 0;
 	while (i < this->G_Vnum)
@@ -275,8 +275,8 @@ int graph::dfsTraversal_t_l()
 		i++;
 	}
 	std::cout << std::endl;
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÉú³ÉÊ÷(É­ÁÖ)ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†ç”Ÿæˆæ ‘(æ£®æž—)å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	iv = Lv.begin();
 	while (iv != Lv.end())
 	{
@@ -284,7 +284,7 @@ int graph::dfsTraversal_t_l()
 		iv++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	ie = Le.begin();
 	while (ie != Le.end())
 	{
@@ -313,10 +313,10 @@ int graph::dfsTraversal_t_l(vNode * V)
 	std::list<eNode*>::iterator ie;
 	if (V == NULL)
 	{
-		std::cout << "½áµã²»´æÔÚ!" << std::endl;
+		std::cout << "ç»“ç‚¹ä¸å­˜åœ¨!" << std::endl;
 		return -1;
 	}
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	dfs_t_l(V, Lv, Le);
 	i = 0;
@@ -329,8 +329,8 @@ int graph::dfsTraversal_t_l(vNode * V)
 		i++;
 	}
 	std::cout << std::endl;
-	std::cout << "Éî¶ÈÓÅÏÈ±éÀúÉú³ÉÊ÷(É­ÁÖ)ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "æ·±åº¦ä¼˜å…ˆéåŽ†ç”Ÿæˆæ ‘(æ£®æž—)å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	iv = Lv.begin();
 	while (iv != Lv.end())
 	{
@@ -338,7 +338,7 @@ int graph::dfsTraversal_t_l(vNode * V)
 		iv++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	ie = Le.begin();
 	while (ie != Le.end())
 	{
@@ -405,7 +405,7 @@ int graph::bfsTraversal_t_l()
 	std::list<eNode*> Le;
 	std::list<vNode*>::iterator iv;
 	std::list<eNode*>::iterator ie;
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	i = 0;
 	while (i < this->G_Vnum)
@@ -417,8 +417,8 @@ int graph::bfsTraversal_t_l()
 		i++;
 	}
 	std::cout << std::endl;
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÉú³ÉÊ÷(É­ÁÖ)ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†ç”Ÿæˆæ ‘(æ£®æž—)å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	iv = Lv.begin();
 	while (iv != Lv.end())
 	{
@@ -426,7 +426,7 @@ int graph::bfsTraversal_t_l()
 		iv++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	ie = Le.begin();
 	while (ie != Le.end())
 	{
@@ -455,10 +455,10 @@ int graph::bfsTraversal_t_l(vNode * V)
 	std::list<eNode*>::iterator ie;
 	if (V == NULL)
 	{
-		std::cout << "½áµã²»´æÔÚ!" << std::endl;
+		std::cout << "ç»“ç‚¹ä¸å­˜åœ¨!" << std::endl;
 		return -1;
 	}
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÐòÁÐÎª:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†åºåˆ—ä¸º:" << std::endl;
 	this->clear_vFlag();
 	bfs_t_l(V, Lv, Le);
 	i = 0;
@@ -471,8 +471,8 @@ int graph::bfsTraversal_t_l(vNode * V)
 		i++;
 	}
 	std::cout << std::endl;
-	std::cout << "¹ã¶ÈÓÅÏÈ±éÀúÉú³ÉÊ÷(É­ÁÖ)ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "å¹¿åº¦ä¼˜å…ˆéåŽ†ç”Ÿæˆæ ‘(æ£®æž—)å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	iv = Lv.begin();
 	while (iv != Lv.end())
 	{
@@ -480,7 +480,7 @@ int graph::bfsTraversal_t_l(vNode * V)
 		iv++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	ie = Le.begin();
 	while (ie != Le.end())
 	{
@@ -638,10 +638,10 @@ int graph::Prim_l(vNode * V)
 		E_l.push_back(pe);
 		V_l.push_back(pe->end());
 	}
-	std::cout << "PrimËã·¨:" << std::endl;
-	std::cout << "Æðµã:" << V->data() << std::endl;
-	std::cout << "×îÐ¡Éú³ÉÊ÷ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "Primç®—æ³•:" << std::endl;
+	std::cout << "èµ·ç‚¹:" << V->data() << std::endl;
+	std::cout << "æœ€å°ç”Ÿæˆæ ‘å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	iv = V_l.begin();
 	while (iv != V_l.end())
 	{
@@ -649,7 +649,7 @@ int graph::Prim_l(vNode * V)
 		iv++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	if (E_l.empty())
 	{
 		std::cout << "null!" << std::endl;
@@ -742,9 +742,9 @@ int graph::Kruskal_l(void)
 		}
 		ie2++;
 	}
-	std::cout << "KruskalËã·¨:" << std::endl;
-	std::cout << "×îÐ¡Éú³ÉÊ÷ÈçÏÂ:" << std::endl;
-	std::cout << "µã¼¯:" << std::endl;
+	std::cout << "Kruskalç®—æ³•:" << std::endl;
+	std::cout << "æœ€å°ç”Ÿæˆæ ‘å¦‚ä¸‹:" << std::endl;
+	std::cout << "ç‚¹é›†:" << std::endl;
 	i = 0;
 	while (i < this->G_Vnum)
 	{
@@ -753,7 +753,7 @@ int graph::Kruskal_l(void)
 		i++;
 	}
 	std::cout << std::endl;
-	std::cout << "±ß¼¯:" << std::endl;
+	std::cout << "è¾¹é›†:" << std::endl;
 	if (E_l.empty())
 	{
 		std::cout << "null!" << std::endl;
@@ -844,9 +844,9 @@ int graph::Dijkstra_l(vNode * V)
 			V_prior[pe->end()->id()] = pe->begin();
 		}
 	} while (pe != NULL);
-	std::cout << "DijkstraËã·¨:" << std::endl;
-	std::cout << "Æðµã:" << V->data() << std::endl;
-	std::cout << "´ÓÆðµãÖÁÆäËû¸÷½áµãµÄ×î¶ÌÂ·¾¶ÈçÏÂ:" << std::endl;
+	std::cout << "Dijkstraç®—æ³•:" << std::endl;
+	std::cout << "èµ·ç‚¹:" << V->data() << std::endl;
+	std::cout << "ä»Žèµ·ç‚¹è‡³å…¶ä»–å„ç»“ç‚¹çš„æœ€çŸ­è·¯å¾„å¦‚ä¸‹:" << std::endl;
 	i = 0;
 	while (i < this->G_Vnum)
 	{
@@ -865,16 +865,16 @@ int graph::Dijkstra_l(vNode * V)
 				std::cout << "->" << S_ch.top();
 				S_ch.pop();
 			}
-			std::cout << " Â·¾¶³¤¶È:" << V_pathLen[i];
+			std::cout << " è·¯å¾„é•¿åº¦:" << V_pathLen[i];
 		}
 		else if (V_pathLen[i] == 0)
 		{
 			std::cout << this->G_vList[i]->data();
-			std::cout << " Â·¾¶³¤¶È:" << V_pathLen[i];
+			std::cout << " è·¯å¾„é•¿åº¦:" << V_pathLen[i];
 		}
 		else
 		{
-			std::cout << "Â·¾¶²»´æÔÚ!";
+			std::cout << "è·¯å¾„ä¸å­˜åœ¨!";
 		}
 		std::cout << std::endl;
 		i++;
@@ -951,8 +951,8 @@ int graph::Floyd_l(void)
 		k++;
 	}
 
-	std::cout << "FloydËã·¨:" << std::endl;
-	std::cout << "¸÷¶Ô½áµãÖ®¼äµÄ×î¶ÌÂ·¾¶ÈçÏÂ:" << std::endl;
+	std::cout << "Floydç®—æ³•:" << std::endl;
+	std::cout << "å„å¯¹ç»“ç‚¹ä¹‹é—´çš„æœ€çŸ­è·¯å¾„å¦‚ä¸‹:" << std::endl;
 	i = 0;
 	while (i < this->G_Vnum)
 	{
@@ -970,7 +970,7 @@ int graph::Floyd_l(void)
 				}
 				if (k != i)
 				{
-					std::cout << "Â·¾¶²»´æÔÚ!";
+					std::cout << "è·¯å¾„ä¸å­˜åœ¨!";
 				}
 				else
 				{
@@ -980,19 +980,19 @@ int graph::Floyd_l(void)
 						std::cout << "->" << S_ch.top();
 						S_ch.pop();
 					}
-					std::cout << " Â·¾¶³¤¶È:" << path_len[i][j];
+					std::cout << " è·¯å¾„é•¿åº¦:" << path_len[i][j];
 				}
 			}
 			else
 			{
 				if (i != j)
 				{
-					std::cout << "Â·¾¶²»´æÔÚ!";
+					std::cout << "è·¯å¾„ä¸å­˜åœ¨!";
 				}
 				else
 				{
 					std::cout << this->G_vList[i]->data();
-					std::cout << " Â·¾¶³¤¶È:" << path_len[i][j];
+					std::cout << " è·¯å¾„é•¿åº¦:" << path_len[i][j];
 				}
 			}
 			std::cout << std::endl;
@@ -1076,11 +1076,11 @@ int graph::AOV_l(void)
 
 	if (L_ch.size() < this->G_Vnum)
 	{
-		std::cout << "¸ÃÍ¼ÎÞÍØÆËÐòÁÐ!" << std::endl;
+		std::cout << "è¯¥å›¾æ— æ‹“æ‰‘åºåˆ—!" << std::endl;
 	}
 	else
 	{
-		std::cout << "¸ÃÍ¼µÄÍØÆËÐòÁÐÎª:";
+		std::cout << "è¯¥å›¾çš„æ‹“æ‰‘åºåˆ—ä¸º:";
 		while (!L_ch.empty())
 		{
 			std::cout << L_ch.front() << ' ';
@@ -1264,7 +1264,7 @@ int graph::AOE_l(void)
 	{
 		if (!this->G_vList[i]->flag2())
 		{
-			std::cout << "¸ÃÍ¼²»´æÔÚ¹Ø¼üÂ·¾¶!" << std::endl;
+			std::cout << "è¯¥å›¾ä¸å­˜åœ¨å…³é”®è·¯å¾„!" << std::endl;
 			return 0;
 		}
 		i++;
@@ -1276,7 +1276,7 @@ int graph::AOE_l(void)
 		path.push_front(pv);
 		pv = prior[pv->id()];
 	}
-	std::cout << "¸ÃÍ¼µÄ¹Ø¼üÂ·¾¶Îª:" << std::endl;
+	std::cout << "è¯¥å›¾çš„å…³é”®è·¯å¾„ä¸º:" << std::endl;
 	iv = path.begin();
 	while (iv != path.end())
 	{
@@ -1288,7 +1288,7 @@ int graph::AOE_l(void)
 		}
 	}
 	std::cout << std::endl;
-	std::cout << "¹Ø¼üÂ·¾¶µÄ³¤¶ÈÎª:" << maxLe[j] << std::endl;
+	std::cout << "å…³é”®è·¯å¾„çš„é•¿åº¦ä¸º:" << maxLe[j] << std::endl;
 
 	return 0;
 }

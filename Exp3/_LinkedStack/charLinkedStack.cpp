@@ -185,7 +185,7 @@ bool charLinkedStack::brancheMatch( char *Str )
 			{
 				//ch1 = NULL;
 				getTop(ch1);
-				//°ÑÏÂÃæÕâ¾ä»°·Åµ½ÏÂÃæÕâ¸öifÅĞ¶ÏÀïÃæ½á¹û¾ÍÕıÈ·ÁË
+				//æŠŠä¸‹é¢è¿™å¥è¯æ”¾åˆ°ä¸‹é¢è¿™ä¸ªifåˆ¤æ–­é‡Œé¢ç»“æœå°±æ­£ç¡®äº†
 				//pop();
 				//cout << (*this) << endl;
 				if( ( ch == ')' && ch1 == '(' ) || 
@@ -222,40 +222,40 @@ bool charLinkedStack::brancheMatch( char *Str )
 	return false;
 }
  
-bool charLinkedStack::judge(const char *sour, const char *dest)		//²»±È¸ü¸ÄÁ½¸öĞòÁĞµÄÄÚÈİ£¬ËùÒÔ¿É¼ÓconstĞŞÊÎÏŞ¶¨·û
+bool charLinkedStack::judge(const char *sour, const char *dest)		//ä¸æ¯”æ›´æ”¹ä¸¤ä¸ªåºåˆ—çš„å†…å®¹ï¼Œæ‰€ä»¥å¯åŠ constä¿®é¥°é™å®šç¬¦
 {
-     assert(sour);//¶ÏÑÔ¿É·ÀÖ¹NULLÖ¸ÕëµÄ´«Èë(±ÜÃâ´«ÈëÖ¸ÕëÒıÆğ³ÌĞò±ÀÀ£µÄÎÊÌâ)
+     assert(sour);//æ–­è¨€å¯é˜²æ­¢NULLæŒ‡é’ˆçš„ä¼ å…¥(é¿å…ä¼ å…¥æŒ‡é’ˆå¼•èµ·ç¨‹åºå´©æºƒçš„é—®é¢˜)
      assert(dest);
-	//stack<char> ss;//½èÖú¿âº¯Êı´´½¨Ò»¸öÕ»
+	//stack<char> ss;//å€ŸåŠ©åº“å‡½æ•°åˆ›å»ºä¸€ä¸ªæ ˆ
 	charLinkedStack ss;
-	if (strlen(sour) != strlen(dest)) //Èç¹ûÁ½¸öĞòÁĞ²»Ò»Ñù³¤£¬×ÔÈ»ÊÇ·Ç·¨µÄĞòÁĞ
+	if (strlen(sour) != strlen(dest)) //å¦‚æœä¸¤ä¸ªåºåˆ—ä¸ä¸€æ ·é•¿ï¼Œè‡ªç„¶æ˜¯éæ³•çš„åºåˆ—
 		return false;
  
-	ss.push(*sour++); //½«Ê×ÔªËØÑ¹Õ»
+	ss.push(*sour++); //å°†é¦–å…ƒç´ å‹æ ˆ
 	while (*dest != '\0')  
 	{
  
-		if (ss.stackEmpty() && *sour != '\0') //Èç¹ûÕ»Îª¿ÕÇÒÈëÕ»ĞòÁĞÎ´½áÊø£¬Ôò²»¶ÏÑ¹ÈëÔªËØ
+		if (ss.stackEmpty() && *sour != '\0') //å¦‚æœæ ˆä¸ºç©ºä¸”å…¥æ ˆåºåˆ—æœªç»“æŸï¼Œåˆ™ä¸æ–­å‹å…¥å…ƒç´ 
 			ss.push(*sour++);
 		char x;
 		ss.getTop(x);
 		while (*dest != x && *sour != '\0') 
 		{
-			ss.push(*sour++);//Èç¹û³öÕ»ÔªËØºÍÕ»¶¥ÔªËØ²»Æ¥ÅäÔò¼ÌĞøÑ¹ÈëÔªËØ
+			ss.push(*sour++);//å¦‚æœå‡ºæ ˆå…ƒç´ å’Œæ ˆé¡¶å…ƒç´ ä¸åŒ¹é…åˆ™ç»§ç»­å‹å…¥å…ƒç´ 
 			ss.getTop(x);
 		}
 		ss.getTop(x);
-		if (*dest == x )  //Èç¹ûÁ½ÕßÏàµÈ£¬½«¸ÃÔªËØµ¯³ö£¬ÇÒÖ¸ÕëÖ¸Ïò³öÕ»ĞòÁĞµÄÏÂÒ»Î»ÖÃÉÏ
+		if (*dest == x )  //å¦‚æœä¸¤è€…ç›¸ç­‰ï¼Œå°†è¯¥å…ƒç´ å¼¹å‡ºï¼Œä¸”æŒ‡é’ˆæŒ‡å‘å‡ºæ ˆåºåˆ—çš„ä¸‹ä¸€ä½ç½®ä¸Š
 		{
 			dest++;
 			ss.pop();
 			continue;
 		}
 		ss.getTop(x);
-		if (*sour == '\0'&& x != *dest)  //Èç¹ûÒ»Ö±²»ÏàµÈ£¬ÖªµÀÈëÕ»ĞòÁĞ½áÊøÈÔÎªÆ¥ÅäÉÏ£¬ËµÃ÷³öÕ»ĞòÁĞ·Ç·¨
+		if (*sour == '\0'&& x != *dest)  //å¦‚æœä¸€ç›´ä¸ç›¸ç­‰ï¼ŒçŸ¥é“å…¥æ ˆåºåˆ—ç»“æŸä»ä¸ºåŒ¹é…ä¸Šï¼Œè¯´æ˜å‡ºæ ˆåºåˆ—éæ³•
 		{
 			return false;
 		}
 	}
-	return true;//·ñÔòĞòÁĞºÏ·¨
+	return true;//å¦åˆ™åºåˆ—åˆæ³•
 }

@@ -81,7 +81,7 @@ BSTNode *BSTree::getRootNode()
 	return head;
 }
 
-BSTNode *BSTree::search( _BSTree BST, elementType value )//µİ¹é²éÕÒ
+BSTNode *BSTree::search( _BSTree BST, elementType value )//é€’å½’æŸ¥æ‰¾
 {
 	ios::sync_with_stdio(false);
 	if(!head)
@@ -103,7 +103,7 @@ BSTNode *BSTree::search( _BSTree BST, elementType value )//µİ¹é²éÕÒ
 	}
 }
 
-BSTNode *BSTree::search( _BSTree BST, elementType value, _BSTree &father )//µü´ú²éÕÒ
+BSTNode *BSTree::search( _BSTree BST, elementType value, _BSTree &father )//è¿­ä»£æŸ¥æ‰¾
 {
 	ios::sync_with_stdio(false);
 	if(!head)
@@ -170,24 +170,24 @@ bool BSTree::deleteNode( _BSTree BST, elementType value )
 	}
 	BSTNode *newNode, *target, *father;
 	target = search( head, value, father );
-	if( !target )//²éÕÒÊ§°Ü£¬²»É¾³ı
+	if( !target )//æŸ¥æ‰¾å¤±è´¥ï¼Œä¸åˆ é™¤
 	{
 		cerr << "Node-deleting failed!\n" << value << " is not in the binary search tree.\n" << "Error in bool BSTree::deleteNode( _BSTree BST, elementType value )." << endl;
 		return false;
 	}
-	if( target->leftChidld && target->rightChild )//±»É¾½áµãÓĞÁ½¸ö *target º¢×Ó½Úµã
+	if( target->leftChidld && target->rightChild )//è¢«åˆ ç»“ç‚¹æœ‰ä¸¤ä¸ª *target å­©å­èŠ‚ç‚¹
 	{
-		newNode = target->rightChild;			//ÕÒ target µÄÖĞĞòºó¼Ì newNode
+		newNode = target->rightChild;			//æ‰¾ target çš„ä¸­åºåç»§ newNode
 		father = target;
 		while( newNode->leftChidld )
 		{
 			father = newNode;
 			newNode = newNode->leftChidld;
 		}
-		target->data = newNode->data;		//½« *newNode µÄÊı¾İ´«½o *target
-		target = newNode;					//ÕÒµ½µÄÕâ¸ö½áµã³ÉÎª±»É¾³ı½áµã
+		target->data = newNode->data;		//å°† *newNode çš„æ•°æ®ä¼ çµ¦ *target
+		target = newNode;					//æ‰¾åˆ°çš„è¿™ä¸ªç»“ç‚¹æˆä¸ºè¢«åˆ é™¤ç»“ç‚¹
 	}
-	if( target->leftChidld )			//µ¥º¢×Ó£¬¼ÇÂ¼·Ç¿Õº¢×Ó½áµã
+	if( target->leftChidld )			//å•å­©å­ï¼Œè®°å½•éç©ºå­©å­ç»“ç‚¹
 	{
 		newNode = target->leftChidld;
 	}
@@ -195,11 +195,11 @@ bool BSTree::deleteNode( _BSTree BST, elementType value )
 	{
 		newNode = target->rightChild;
 	}
-	if( target == head )					//±»É¾½áµãÊÇ¸ù½áµã
+	if( target == head )					//è¢«åˆ ç»“ç‚¹æ˜¯æ ¹ç»“ç‚¹
 	{
 		head = newNode;
 	}
-	else if( newNode && newNode->data < father->data )		//ÖØĞÂÁ´½Ó£¬±£³Ö¶ş²æÅÅĞòÊ÷
+	else if( newNode && newNode->data < father->data )		//é‡æ–°é“¾æ¥ï¼Œä¿æŒäºŒå‰æ’åºæ ‘
 	{
 		father->leftChidld = newNode;
 	}

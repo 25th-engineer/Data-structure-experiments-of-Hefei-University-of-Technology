@@ -33,7 +33,7 @@ bool linkedList::initiateLinkedList()
 	head = new LList;
 	if( !head )
 	{
-		cout << "³õÊ¼»¯Ê§°Ü£¡" << endl;
+		cout << "åˆå§‹åŒ–å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	head->next = NULL;
@@ -106,7 +106,7 @@ void linkedList::printLinkedList()
 	std::ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "¿ÕÁ´±í£¬ÎÞ·¨´òÓ¡£¡" << endl;
+		cout << "ç©ºé“¾è¡¨ï¼Œæ— æ³•æ‰“å°ï¼" << endl;
 		return;
 	}
 	LList* tmp = head->next;
@@ -126,7 +126,7 @@ int linkedList::linkedListLength()
 {
 	if( isEmpty() )
 	{
-		cout << "¿ÕÁ´±í£¡" << endl;
+		cout << "ç©ºé“¾è¡¨ï¼" << endl;
 		return -1;
 	}
 	int l = 0;
@@ -145,17 +145,17 @@ bool linkedList::getElementByPosition( int pos, int& value )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Á´±íÎª¿Õ£¡»ñÈ¡ÔªËØÊ§°Ü£¡" << endl;
+		cout << "é“¾è¡¨ä¸ºç©ºï¼èŽ·å–å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	if( pos > len )
 	{
-		cout << "Î»ÖÃ´óÓÚ±í³¤£¡»ñÈ¡ÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¤§äºŽè¡¨é•¿ï¼èŽ·å–å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	if( pos <= 0 )
 	{
-		cout << "Î»ÖÃ±ØÐë´óÓÚ0£¡»ñÈ¡ÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¿…é¡»å¤§äºŽ0ï¼èŽ·å–å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	int index = 0;
@@ -179,23 +179,23 @@ bool linkedList::insertListByPosition( int pos, int value )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Á´±íÎª¿Õ£¡²åÈëÔªËØÊ§°Ü£¡" << endl;
+		cout << "é“¾è¡¨ä¸ºç©ºï¼æ’å…¥å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	else if( pos > len )
 	{
-		cout << "Î»ÖÃ´óÓÚ±í³¤ÇÒ²îÖµ´óÓÚ1£¡É¾³ýÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¤§äºŽè¡¨é•¿ä¸”å·®å€¼å¤§äºŽ1ï¼åˆ é™¤å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	else if( pos == len )
 	{
-		cout << "½«»áÖ±½Ó°ÑÐÂ½Úµã½ÓÔÚÁ´±íÎ²²¿£¡" << endl;
+		cout << "å°†ä¼šç›´æŽ¥æŠŠæ–°èŠ‚ç‚¹æŽ¥åœ¨é“¾è¡¨å°¾éƒ¨ï¼" << endl;
 		addLinkedListNodeLast( value );
 		return true;
 	}
 	else if( pos <= 0 )
 	{
-		cout << "Î»ÖÃ±ØÐë´óÓÚ0£¡²åÈëÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¿…é¡»å¤§äºŽ0ï¼æ’å…¥å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	int index = 0;
@@ -207,7 +207,7 @@ bool linkedList::insertListByPosition( int pos, int value )
 	}
 	if( tmp == NULL )
 	{
-		cout << "Î»ÖÃ´óÓÚ±í³¤ÇÒ²»ÔÚ±í³¤µÄºóÒ»Î»£¡²åÈëÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¤§äºŽè¡¨é•¿ä¸”ä¸åœ¨è¡¨é•¿çš„åŽä¸€ä½ï¼æ’å…¥å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	LList* PNew = new LList;
@@ -223,7 +223,7 @@ bool linkedList::getElementByValue( int& pos, int value )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Á´±íÎª¿Õ£¡»ñÈ¡ÔªËØÊ§°Ü£¡" << endl;
+		cout << "é“¾è¡¨ä¸ºç©ºï¼èŽ·å–å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	int index = 1;
@@ -246,17 +246,17 @@ bool linkedList::removeListNodeByPosition( int pos, int& value )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Á´±íÎª¿Õ£¡É¾³ýÔªËØÊ§°Ü£¡" << endl;
+		cout << "é“¾è¡¨ä¸ºç©ºï¼åˆ é™¤å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	if( pos > len )
 	{
-		cout << "Î»ÖÃ´óÓÚ±í³¤£¡É¾³ýÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¤§äºŽè¡¨é•¿ï¼åˆ é™¤å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	if( pos <= 0 )
 	{
-		cout << "Î»ÖÃ±ØÐë´óÓÚ0£¡É¾³ýÔªËØÊ§°Ü£¡" << endl;
+		cout << "ä½ç½®å¿…é¡»å¤§äºŽ0ï¼åˆ é™¤å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	LList* tmp = head;
@@ -279,12 +279,12 @@ bool linkedList::insertListSort( int value )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Á´±íÎª¿Õ£¡²åÈëÔªËØÊ§°Ü£¡" << endl;
+		cout << "é“¾è¡¨ä¸ºç©ºï¼æ’å…¥å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	LList* tmp = head;
-	while( tmp->next && tmp->next->data < value )//ÏÂÒ»¸ö½ÚµãµÄdata±ÈvalueÐ¡¾Í¼ÌÐøÑ­»·
-	//Ð´³ÉÏÂÃæÕâÑùµ¼ÖÂ±È×îºóÒ»¸ö½ÚµãµÄdata´óµÄvalueÎÞ·¨²åÈë£¡ÒòÎªÑ­»·½áÊøÊ±tmp->nextÎªNULL£¬ÎÞ·¨²åÈë¡£
+	while( tmp->next && tmp->next->data < value )//ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„dataæ¯”valueå°å°±ç»§ç»­å¾ªçŽ¯
+	//å†™æˆä¸‹é¢è¿™æ ·å¯¼è‡´æ¯”æœ€åŽä¸€ä¸ªèŠ‚ç‚¹çš„dataå¤§çš„valueæ— æ³•æ’å…¥ï¼å› ä¸ºå¾ªçŽ¯ç»“æŸæ—¶tmp->nextä¸ºNULLï¼Œæ— æ³•æ’å…¥ã€‚
 	//while( tmp && tmp->next->data < value )
 	{
 		//if( tmp->data < value )
@@ -302,7 +302,7 @@ bool linkedList::oddEvenSort( linkedList& LA,linkedList& LB )
 	ios::sync_with_stdio(false);
 	if( isEmpty() )
 	{
-		cout << "Ô­Á´±íÎª¿Õ£¡·ÖÅäÔªËØÊ§°Ü£¡" << endl;
+		cout << "åŽŸé“¾è¡¨ä¸ºç©ºï¼åˆ†é…å…ƒç´ å¤±è´¥ï¼" << endl;
 		return false;
 	}
 	//if( !LA.head->next && !LB.head->next )

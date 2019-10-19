@@ -24,7 +24,7 @@ public:
 	void display();
 	void readDataFromFile();
 	void fixUpTree( Rec* tree, int pos );
-	void treeSelectSort( T a[], int n );// ˜–Œ—°‘Ò≈≈–Ú
+	void treeSelectSort( T a[], int n );//√ä√∑√ê√é√ë¬°√î√±√Ö√Ö√ê√≤
 	int getArrayLength();
 	T *getArray();
 	

@@ -26,7 +26,7 @@ typedef struct rec
 {
 	int data;
 	int index;
-	bool active;   //节点未出局，则是true，其它false   
+	bool active;   //鑺傜偣鏈嚭灞�锛屽垯鏄痶rue锛屽叾瀹僨alse   
 }Rec;
 
 // TODO: reference additional headers your program requires here
